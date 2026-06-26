@@ -1,12 +1,12 @@
+```html
 <!DOCTYPE html>
-
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>السيد موبايل | خدمات التسديد</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
@@ -18,529 +18,263 @@ font-family:'Cairo',sans-serif;
 }
 
 body{
-background:#f5f7fb;
+background:#f4f7fb;
 color:#111;
 overflow-x:hidden;
 }
 
-:root{
---blue:#0f5cc0;
---gold:#f5b300;
---dark:#0b3f86;
---light:#ffffff;
-}
-
-.hero{
-min-height:100vh;
-background:
-linear-gradient(135deg,#0f5cc0 0%,#1d74dd 40%,#0b3f86 100%);
+header{
+background:linear-gradient(135deg,#0057b8,#1d8fff);
+padding:80px 20px 60px;
+text-align:center;
+color:white;
 position:relative;
 overflow:hidden;
-padding:40px 20px 80px;
 }
 
-.hero::before{
-content:'';
-position:absolute;
-width:600px;
-height:600px;
-background:rgba(255,255,255,.06);
-border-radius:50%;
-top:-250px;
-left:-150px;
-}
-
-.hero::after{
+header::before{
 content:'';
 position:absolute;
 width:500px;
 height:500px;
-background:rgba(255,255,255,.04);
+background:rgba(255,255,255,0.08);
 border-radius:50%;
-bottom:-250px;
-right:-100px;
-}
-
-.container{
-width:100%;
-max-width:1200px;
-margin:auto;
-position:relative;
-z-index:2;
-}
-
-.navbar{
-display:flex;
-justify-content:space-between;
-align-items:center;
-margin-bottom:60px;
+top:-250px;
+left:-100px;
 }
 
 .logo{
-display:flex;
-align-items:center;
-gap:15px;
+width:140px;
+margin-bottom:25px;
+filter:drop-shadow(0 10px 20px rgba(0,0,0,0.25));
 }
 
-.logo img{
-width:80px;
-height:80px;
-object-fit:contain;
-background:#fff;
-border-radius:22px;
-padding:8px;
-box-shadow:0 10px 30px rgba(0,0,0,.18);
+h1{
+font-size:48px;
+font-weight:800;
+margin-bottom:10px;
 }
 
-.logo-text h1{
-color:#fff;
-font-size:32px;
-font-weight:900;
-line-height:1.2;
-}
-
-.logo-text span{
-color:#ffd15e;
-font-size:18px;
-font-weight:700;
-}
-
-.hero-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-align-items:center;
-gap:50px;
-}
-
-.hero-content h2{
-font-size:58px;
-line-height:1.3;
-font-weight:900;
-color:#fff;
-margin-bottom:20px;
-}
-
-.hero-content p{
+.subtitle{
 font-size:22px;
-line-height:2;
-color:#e8f1ff;
+opacity:.95;
 margin-bottom:35px;
 }
 
-.features{
-display:flex;
-flex-wrap:wrap;
-gap:15px;
-margin-bottom:40px;
-}
-
-.feature{
-background:rgba(255,255,255,.12);
-border:1px solid rgba(255,255,255,.15);
-backdrop-filter:blur(12px);
-padding:14px 22px;
-border-radius:16px;
-color:#fff;
-font-weight:700;
-font-size:17px;
-}
-
 .download-btn{
-display:inline-flex;
-align-items:center;
-gap:14px;
-background:linear-gradient(135deg,var(--gold),#ffd55d);
+display:inline-block;
+background:#ffbf00;
 color:#111;
-padding:20px 40px;
-border-radius:22px;
+padding:18px 45px;
 font-size:22px;
-font-weight:900;
+font-weight:800;
+border-radius:18px;
 text-decoration:none;
-box-shadow:0 20px 40px rgba(0,0,0,.25);
-transition:.35s;
+transition:.3s;
+box-shadow:0 12px 25px rgba(0,0,0,.25);
 }
 
 .download-btn:hover{
-transform:translateY(-6px) scale(1.02);
+transform:translateY(-4px);
+background:#ffd84d;
 }
 
-.download-btn span{
-font-size:30px;
-}
-
-.hero-phone{
-display:flex;
-justify-content:center;
-position:relative;
-}
-
-.phone-frame{
-width:360px;
-background:#fff;
-border-radius:45px;
-padding:16px;
-box-shadow:0 40px 80px rgba(0,0,0,.35);
-transform:rotate(-3deg);
-}
-
-.phone-frame img{
+.hero-image{
+margin-top:50px;
 width:100%;
-border-radius:32px;
-display:block;
-}
-
-.stats{
-margin-top:70px;
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:25px;
-}
-
-.stat{
-background:#fff;
-padding:30px;
-border-radius:26px;
-text-align:center;
-box-shadow:0 15px 40px rgba(0,0,0,.1);
-}
-
-.stat h3{
-font-size:42px;
-color:var(--blue);
-margin-bottom:10px;
-font-weight:900;
-}
-
-.stat p{
-font-size:18px;
-color:#666;
-font-weight:700;
+max-width:950px;
+border-radius:30px;
+box-shadow:0 20px 40px rgba(0,0,0,.2);
 }
 
 .section{
 padding:90px 20px;
+max-width:1200px;
+margin:auto;
 }
 
 .section-title{
 text-align:center;
-margin-bottom:60px;
-}
-
-.section-title h2{
-font-size:48px;
-font-weight:900;
-color:var(--dark);
-margin-bottom:15px;
-}
-
-.section-title p{
-font-size:20px;
-color:#666;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-gap:30px;
-max-width:1200px;
-margin:auto;
-}
-
-.card{
-background:#fff;
-border-radius:28px;
-overflow:hidden;
-box-shadow:0 18px 45px rgba(0,0,0,.08);
-transition:.35s;
-}
-
-.card:hover{
-transform:translateY(-10px);
-}
-
-.card img{
-width:100%;
-height:560px;
-object-fit:cover;
-}
-
-.card-body{
-padding:24px;
-}
-
-.card-body h3{
-font-size:24px;
-color:var(--dark);
-margin-bottom:12px;
+font-size:40px;
+margin-bottom:20px;
+color:#0057b8;
 font-weight:800;
 }
 
-.card-body p{
-font-size:17px;
-line-height:1.9;
-color:#666;
-}
-
-.services{
-background:#fff;
-border-radius:35px;
-padding:60px;
-box-shadow:0 20px 50px rgba(0,0,0,.08);
-max-width:1200px;
-margin:auto;
-}
-
-.service-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:25px;
-margin-top:40px;
-}
-
-.service{
-background:#f7f9fc;
-border-radius:24px;
-padding:30px 20px;
+.section-desc{
 text-align:center;
-transition:.3s;
-border:2px solid transparent;
-}
-
-.service:hover{
-border-color:var(--gold);
-transform:translateY(-8px);
-}
-
-.service-icon{
-font-size:50px;
-margin-bottom:16px;
-}
-
-.service h4{
-font-size:22px;
-margin-bottom:10px;
-color:var(--dark);
-}
-
-.service p{
-color:#666;
-line-height:1.8;
-}
-
-.cta{
-padding:100px 20px;
-background:linear-gradient(135deg,#0b3f86,#0f5cc0);
-text-align:center;
-color:#fff;
-}
-
-.cta h2{
-font-size:54px;
-font-weight:900;
-margin-bottom:20px;
-}
-
-.cta p{
-font-size:22px;
+max-width:800px;
+margin:auto auto 60px;
+font-size:20px;
 line-height:2;
-max-width:900px;
-margin:auto auto 35px;
-color:#dbe7ff;
-}
-
-.contact{
-margin-top:40px;
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-}
-
-.contact a{
-background:#fff;
-color:#0f5cc0;
-text-decoration:none;
-padding:18px 30px;
-border-radius:18px;
-font-size:22px;
-font-weight:900;
-transition:.3s;
-}
-
-.contact a:hover{
-transform:translateY(-5px);
-}
-
-footer{
-background:#071f42;
-padding:30px;
-text-align:center;
-color:#b9d0ff;
-font-size:16px;
-}
-
-@media(max-width:950px){
-
-.hero-grid{
-grid-template-columns:1fr;
-}
-
-.hero-content{
-text-align:center;
-}
-
-.hero-content h2{
-font-size:42px;
-}
-
-.hero-content p{
-font-size:19px;
+color:#555;
 }
 
 .features{
-justify-content:center;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:25px;
 }
 
-.stats{
-grid-template-columns:1fr;
+.feature-card{
+background:white;
+padding:35px 25px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+transition:.3s;
 }
 
-.phone-frame{
-width:300px;
+.feature-card:hover{
+transform:translateY(-10px);
 }
 
-.section-title h2{
+.feature-card h3{
+font-size:24px;
+margin-bottom:12px;
+color:#0057b8;
+}
+
+.feature-card p{
+line-height:1.9;
+color:#666;
+font-size:17px;
+}
+
+.screenshots{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:30px;
+}
+
+.screenshots img{
+width:100%;
+border-radius:30px;
+box-shadow:0 15px 35px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.screenshots img:hover{
+transform:scale(1.03);
+}
+
+.contact-box{
+background:linear-gradient(135deg,#0057b8,#007bff);
+padding:60px 20px;
+border-radius:35px;
+color:white;
+text-align:center;
+margin-top:80px;
+box-shadow:0 20px 40px rgba(0,0,0,.15);
+}
+
+.contact-box h2{
 font-size:38px;
+margin-bottom:20px;
 }
 
-.cta h2{
-font-size:40px;
+.phone{
+display:block;
+font-size:28px;
+font-weight:800;
+margin:15px 0;
+color:#ffcf33;
+text-decoration:none;
+}
+
+.footer{
+text-align:center;
+padding:30px;
+background:#001d3d;
+color:white;
+margin-top:80px;
+font-size:16px;
+}
+
+@media(max-width:768px){
+
+h1{
+font-size:34px;
+}
+
+.subtitle{
+font-size:18px;
+}
+
+.download-btn{
+font-size:19px;
+padding:16px 30px;
+}
+
+.section-title{
+font-size:30px;
 }
 
 }
 
 </style>
-
 </head>
 
 <body>
 
-<section class="hero">
+<header>
 
-<div class="container">
+<img src="logo.png" class="logo">
 
-<div class="navbar">
-
-<div class="logo">
-<img src="https://i.postimg.cc/0Q2M5N8K/logo.png">
-
-<div class="logo-text">
 <h1>السيد موبايل</h1>
-<span>لخدمات التسديد الإلكترونية</span>
+
+<div class="subtitle">
+تطبيق متكامل لخدمات التسديد والشحن والتحويلات الإلكترونية
 </div>
-</div>
 
-</div>
+<a class="download-btn"
+href="https://drive.google.com/uc?export=download&id=1GlOt7Ak2D2r4HsHk2gVnlWLVQRGAFWJQ">
+تحميل التطبيق الآن
+</a>
 
-<div class="hero-grid">
+<br>
 
-<div class="hero-content">
+<img src="banner.jpg" class="hero-image">
 
-<h2>
-كل خدمات التسديد في تطبيق واحد
-</h2>
+</header>
 
-<p>
-تطبيق احترافي متكامل لتنفيذ خدمات التسديد، الباقات، الإنترنت، الألعاب، والتحويلات بسرعة وأمان وواجهة عصرية سهلة الاستخدام.
+<section class="section">
+
+<h2 class="section-title">لماذا السيد موبايل؟</h2>
+
+<p class="section-desc">
+تطبيق احترافي يوفر جميع خدمات الاتصالات والتسديد والتحويلات والألعاب
+في منصة واحدة بسهولة وسرعة وأمان مع تصميم عصري وتجربة استخدام مميزة.
 </p>
 
 <div class="features">
 
-<div class="feature">⚡ سرعة عالية</div>
-<div class="feature">🔒 أمان كامل</div>
-<div class="feature">📶 تسديد جميع الشبكات</div>
-<div class="feature">🎮 شحن الألعاب</div>
-<div class="feature">💳 إدارة الرصيد</div>
-
-</div>
-
-<a class="download-btn" href="https://drive.google.com/uc?export=download&id=1GlOt7Ak2D2r4HsHk2gVnlWLVQRGAFWJQ">
-<span>⬇</span>
-تحميل التطبيق الآن
-</a>
-
-</div>
-
-<div class="hero-phone">
-
-<div class="phone-frame">
-<img src="https://i.postimg.cc/j2z1Qy90/app1.jpg">
-</div>
-
-</div>
-
-</div>
-
-<div class="stats">
-
-<div class="stat">
-<h3>24/7</h3>
-<p>خدمة مستمرة طوال الوقت</p>
-</div>
-
-<div class="stat">
-<h3>100%</h3>
-<p>واجهة سهلة وسريعة</p>
-</div>
-
-<div class="stat">
-<h3>∞</h3>
-<p>خدمات متعددة في مكان واحد</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<div class="section-title">
-<h2>واجهات التطبيق</h2>
-<p>تصميم عصري وتجربة استخدام احترافية</p>
-</div>
-
-<div class="cards">
-
-<div class="card">
-<img src="https://i.postimg.cc/nLN8Lj3X/app2.jpg">
-<div class="card-body">
-<h3>واجهة رئيسية ذكية</h3>
+<div class="feature-card">
+<h3>شحن فوري</h3>
 <p>
-سهولة الوصول لجميع الخدمات عبر تصميم احترافي سريع وسلس.
+شحن جميع الشبكات اليمنية بسرعة عالية وبدون تعقيد.
 </p>
 </div>
-</div>
 
-<div class="card">
-<img src="https://i.postimg.cc/2j0K2bP4/app3.jpg">
-<div class="card-body">
-<h3>بطاقات وشحن</h3>
+<div class="feature-card">
+<h3>تسديد الباقات</h3>
 <p>
-إدارة بطاقات الإنترنت والكروت الرقمية بطريقة منظمة وعصرية.
+تسديد باقات الإنترنت والمكالمات لجميع الشبكات بسهولة.
 </p>
 </div>
-</div>
 
-<div class="card">
-<img src="https://i.postimg.cc/8C5QbY4n/app4.jpg">
-<div class="card-body">
+<div class="feature-card">
 <h3>خدمات الألعاب</h3>
 <p>
-تسديد وشحن الألعاب والمتاجر الرقمية بكل سهولة وأمان.
+شحن الألعاب والبطاقات الرقمية بأفضل سرعة وأداء.
 </p>
 </div>
+
+<div class="feature-card">
+<h3>واجهة احترافية</h3>
+<p>
+تصميم عصري وتجربة استخدام مريحة وسلسة لجميع المستخدمين.
+</p>
 </div>
 
 </div>
@@ -549,88 +283,51 @@ font-size:40px;
 
 <section class="section">
 
-<div class="services">
+<h2 class="section-title">لقطات من التطبيق</h2>
 
-<div class="section-title">
-<h2>الخدمات المتوفرة</h2>
-<p>كل ما يحتاجه العميل داخل تطبيق واحد</p>
-</div>
-
-<div class="service-grid">
-
-<div class="service">
-<div class="service-icon">📱</div>
-<h4>شحن فوري</h4>
-<p>تنفيذ عمليات الشحن بسرعة فائقة لجميع الشبكات.</p>
-</div>
-
-<div class="service">
-<div class="service-icon">🌐</div>
-<h4>تسديد الإنترنت</h4>
-<p>دفع وتجديد باقات الإنترنت المختلفة بسهولة.</p>
-</div>
-
-<div class="service">
-<div class="service-icon">🎮</div>
-<h4>شحن الألعاب</h4>
-<p>بطاقات الألعاب والمنصات الرقمية المختلفة.</p>
-</div>
-
-<div class="service">
-<div class="service-icon">💳</div>
-<h4>إدارة الرصيد</h4>
-<p>متابعة الرصيد والحساب بطريقة احترافية.</p>
-</div>
-
-<div class="service">
-<div class="service-icon">⚡</div>
-<h4>أداء سريع</h4>
-<p>واجهة خفيفة وسريعة تناسب جميع الأجهزة.</p>
-</div>
-
-<div class="service">
-<div class="service-icon">🔐</div>
-<h4>حماية وأمان</h4>
-<p>حماية متقدمة للبيانات والمعاملات المالية.</p>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="cta">
-
-<div class="container">
-
-<h2>حمّل التطبيق الآن</h2>
-
-<p>
-ابدأ باستخدام تطبيق السيد موبايل لخدمات التسديد الإلكترونية واستمتع بتجربة احترافية متكاملة تجمع السرعة والأمان وسهولة الاستخدام.
+<p class="section-desc">
+واجهة حديثة بتصميم احترافي يمنح المستخدم تجربة قوية وسهلة.
 </p>
 
-<a class="download-btn" href="https://drive.google.com/uc?export=download&id=1GlOt7Ak2D2r4HsHk2gVnlWLVQRGAFWJQ">
-⬇ تحميل مباشر
-</a>
+<div class="screenshots">
 
-<div class="contact">
+<img src="screen1.jpg">
 
-<a href="tel:778183662">📞 778183662</a>
+<img src="screen2.jpg">
 
-<a href="tel:771685586">📞 771685586</a>
+<img src="screen3.jpg">
+
+<img src="screen4.jpg">
 
 </div>
+
+<div class="contact-box">
+
+<h2>تواصل معنا الآن</h2>
+
+<a class="phone" href="tel:778183662">
+778183662
+</a>
+
+<a class="phone" href="tel:771685586">
+771685586
+</a>
+
+<br><br>
+
+<a class="download-btn"
+href="https://drive.google.com/uc?export=download&id=1GlOt7Ak2D2r4HsHk2gVnlWLVQRGAFWJQ">
+تحميل التطبيق
+</a>
 
 </div>
 
 </section>
 
-<footer>
-
-© جميع الحقوق محفوظة — السيد موبايل لخدمات التسديد
-
+<footer class="footer">
+جميع الحقوق محفوظة © السيد موبايل 2026
 </footer>
 
 </body>
 </html>
+```
